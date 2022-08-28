@@ -1,1 +1,65 @@
 /* You can add global styles to this file, and also import other style files */
+.bannerText{
+    color: aliceblue;
+}
+.banner{
+    background-image: url(./assets/images/mainputnik.jpg);
+   // background-repeat: no-repeat;
+    background-size:  100%;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 2;
+    left: 0;
+    height: 350px;
+    padding-bottom: 1rem!important;
+}
+.logo {
+    width: 150px;
+    height: auto;
+    padding-top: 0px;
+}
+
+.present{
+    color:white;
+}
+ .list_places{
+    color: aliceblue!important;
+
+}
+.list_places :hover{
+    box-shadow: 2rem;
+}
+.img-places{
+    height:300px;
+    width:88%;
+}
+.card{
+    width:18rem;
+}
+h2 .text{
+ color: rgb(83,137,214)!important;
+}
+
+
+  
+  .carousel .btn-prev,
+  .carousel .btn-next {
+    width: 20px;
+    height: 20px;
+    background-color: none;
+   // top: calc(-20% -25%);
+    opacity: .8;
+  }
+  
+  .carousel .btn-prev {
+    left: unset;
+    right: 30px;
+  }
+ footer{
+    background-color: rgb(2,218,169)!important;
+ }
+
+
+  

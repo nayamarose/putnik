@@ -1,0 +1,74 @@
+<section class="main-frame">
+    <div class="container">
+        <div class="row pt-5 mt-5">
+            <div class="col-lg-7 text-center mx-auto pt-4">
+                <img src="/assets/images/putnik-log-blue-cloud.png" alt="" />
+
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis ex sapiente cumque vitae voluptatem placeat iure atque, laboriosam, est dolorum ipsam itaque. Dolor nisi deleniti voluptates, facilis enim porro velit
+                    quam, ab necessitatibus iusto excepturi error? Quos quaerat asperiores ipsa dolores eligendi odit commodi facere illo totam rerum maxime quas dicta, minus enim incidunt dolorem neque ipsum distinctio.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12 text-center mx-auto mt-5 pb-3">
+                <h2 class="text">Itinerary</h2>
+            </div>
+            <div class="col-lg-4 pb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Goa</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="card-link">Card link</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 pb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Wayanad</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="card-link">Card link</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 pb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Varkala</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="card-link">Card link</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                
+
+                <div class="row pt-5">
+                    <div class="col-lg-10 text-center mx-auto">
+                        <h2>Gallery</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-1"><button class="btn-prev" (click)="prev()">prev</button></div>
+                    <div class="col-lg-10">
+                        <ngx-slick-carousel #slickModal="slick-carousel" [config]="slideConfig" class="carousel">
+                            <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+                                <img class="img-places" src="{{ slide.img }}" alt="" width="100%" />
+                            </div>
+                        </ngx-slick-carousel>
+                    </div>
+                    <div class="col-1"><button class="btn-next" (click)="next()">next</button></div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+</section>

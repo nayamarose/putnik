@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="row pt-4 mt-4">
+        <div class="col-lg-3 mt-5 pt-5">
+            <input type="text" [(ngModel)]="name">
+            <p>{{name}}</p>
+        </div>
+        <div class="col-lg-3 mt-5 pt-5">
+            <!--Property Binding-->
+            <button class="btn btn-primary" [disabled]="!allowService" (click)="viewDetails()">View Details</button>
+            <p *ngIf="detailsAdded else:nodetails">{{details}}</p>
+            <ng-template #nodetails>
+                <p>no details</p>
+            </ng-template>
+        </div>
+        <div class="col-lg-3 mt-5 pt-5">
+            <!--Event Binding-->
+            <label for="">Place</label>
+            <input type="text" class="form-control" (input)="updatePlace($event)">
+            <p>{{place}}</p>
+        </div>
+        <div class="col-lg-3 mt-5 pt-5">
+            <!--Two way Data Binding-->
+            <label for="">Place</label>
+            <input type="text" class="form-control" [(ngModel)]="place">
+            <p>{{place}}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12" *ngFor="let place of placeArray">
+            <p [ngStyle]="{'background-color': getColor()}" [ngClass]="{present: place === 'present'}">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, laudantium, similique minima cum nam culpa
+            quam voluptatem aut nihil neque beatae velit voluptatibus fugiat at magni ducimus necessitatibus. Incidunt,
+            laudantium minus quia quidem magnam nobis ullam maxime! Blanditiis cum sunt repellat, doloribus alias
+            nesciunt, excepturi ducimus ut eveniet perspiciatis eum non totam laborum, molestiae quas hic commodi
+            necessitatibus. Nemo molestias est tempora ad inventore quaerat dolorum deserunt qui. Laudantium nam
+            provident magnam eos natus labore pariatur, quasi culpa optio illum nemo iste unde praesentium fugiat autem
+            vitae expedita voluptate repellendus maxime, dolorem rem. Placeat soluta quibusdam expedita quod, amet
+            harum?
+        </p>
+        </div>
+    </div>
+</div>
